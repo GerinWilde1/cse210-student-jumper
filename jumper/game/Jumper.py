@@ -1,7 +1,7 @@
 
 import random
-from game.words import words 
-from game.Shoot import glider
+import game.word as word
+import game.Shoot as Shoot
 
 
 
@@ -17,14 +17,19 @@ class Jumper:
     
 
     def __init__(self):      
-        lives = 4
-        self.word  = random.choice(words)#picks a random word from the word list
+        
+
+        x = self.word.word()
+
+        self.lives = 4
+        self.word  = random.choice(word)#picks a random word from the word list
         self.reveal = list(len(self.word)*'_')#creates a panal to demonstrate the amount of letters the user must guess
 
         
-        print(glider[4- lives])
+        print(glider[4- self.lives])
         print(self.reveal)
 
+    
     def shoot(self):
         shoot = {                  
         0: """
