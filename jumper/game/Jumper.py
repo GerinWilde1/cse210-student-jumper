@@ -1,6 +1,6 @@
 
 import random
-from game.words2 import words 
+from game.words import words 
 from game.Shoot import glider
 
 
@@ -72,3 +72,38 @@ class Jumper:
                     / \  
                 
                   ^^^^^^^"""}
+    
+    def guess_letter(word, guessed_list):
+      """This function lets the user guess a letter and prints out correct ones"""
+      # self.reveal is our gussed_list in this function
+      # sel.word is our word from in this function
+      # we created test.py to show how the function would be working
+      print()
+      guessed_letter = input("Guess a letter [a-z]: ").lower()
+
+      guessed_list = guessed_list 
+      word_length = len(word) 
+      count = 0
+      
+      while count < word_length:
+        if count > word_length:
+            break
+        if word[count] == guessed_letter:
+          
+          guessed_list[count] = guessed_letter
+          
+        count += 1
+      
+      print()
+
+      for i in guessed_list:
+        print(i, end=" ")
+
+      print()
+
+      return guessed_list
+
+
+    
+
+    
