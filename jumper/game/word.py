@@ -11,8 +11,7 @@ class Word:
 
         def __init__(self):
             
-            
-            self.words = random.choice("abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom",
+            self.list = ["abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom",
             "azure", "bagpipes", "bandwagon", "banjo", "bayou", "beekeeper", "bikini", "blitz", "blizzard", "boggle",
             "bookworm", "boxcar", "boxful", "buckaroo", "buffalo", "buffoon", "buxom", "buzzard", "buzzing",
             "buzzwords", "caliph", "cobweb", "cockiness", "croquet", "crypt", "curacao", "cycle", "daiquiri",
@@ -26,6 +25,15 @@ class Word:
             "rickshaw", "schnapps", "scratch", "shiv", "snazzy", "sphinx", "thriftless", "thumbscrew", "topaz",
             "transcript", "transgress", "unknown", "unworthy", "unzip", "uptown", "vaporize", "vixen", "vodka",
             "voodoo", "vortex", "walkway", "waltz", "wave", "wavy", "wyvern", "xylophone", "yachtsman", "yippee", "yoked",
-            "youthful", "yummy", "zephyr", "zigzag", "zigzagging", "zilch", "zombie")
+            "youthful", "yummy", "zephyr", "zigzag", "zigzagging", "zilch", "zombie"]
+            self.words = ""
+
+
+
+
+
+        def  word(self):
+            self.sord = random.choice(self.list)
+            return self.word
 
 
