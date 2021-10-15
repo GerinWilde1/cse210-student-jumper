@@ -9,7 +9,7 @@ class Director:
     def __init__(self):
         pass
         self.keep_playing = True
-
+        
         
 
     def start_game(self):
@@ -23,4 +23,5 @@ class Director:
         pass
     def do_outputs(self):
         pass
-    def do_updates(self)
+    def do_updates(self):
+        pass
