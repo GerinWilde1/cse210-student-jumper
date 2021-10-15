@@ -13,7 +13,6 @@ class Director:
         self.jumper = jumper()
         self.word = word()
 
-        
 
     def start_game(self):
 
