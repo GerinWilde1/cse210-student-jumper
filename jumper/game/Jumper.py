@@ -72,23 +72,3 @@ class Jumper:
               print("You've lost")
               self.lost = False
               print(self.word)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
