@@ -1,5 +1,5 @@
 from word import Word
-
+from Word import 
 
 words = ""
 

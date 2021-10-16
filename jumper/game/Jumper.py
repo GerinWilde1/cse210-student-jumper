@@ -1,7 +1,6 @@
 
 import random
-from game.word import Word
-import game.Shoot as Shoot
+from game.word import Word 
 
 
 
@@ -20,8 +19,53 @@ class Jumper:
       
 
       x = self.Word.word()
+      self.shoot = {                  
+      0: """
+                  ___  
+                  /___\ 
+                  \   / 
+                  \ /               
+                    0   
+                  /|\  
+                  / \  
+              
+                ^^^^^^^""",
 
-      self.lives = 4
+      1:"""                 
+                  /___\ 
+                  \   / 
+                  \ /  
+                    0   
+                  /|\  
+                  / \  
+                          
+                ^^^^^^^""",
+                      
+      2:"""          
+                  \   / 
+                  \ /  
+                    0   
+                  /|\  
+                  / \  
+
+                ^^^^^^^""",
+
+      3:"""          
+                  \ /  
+                    0   
+                  /|\  
+                  / \  
+
+                ^^^^^^^""",
+
+      4:"""
+
+                    x   
+                  /|\  
+                  / \  
+              
+                ^^^^^^^"""}
+      self.lives = 0
       self.rand = self.Word.word()#picks a random word from the word list
       self.reveal = list(len(self.word)*'_')#creates a panal to demonstrate the amount of letters the user must guess
 
@@ -30,54 +74,19 @@ class Jumper:
       print(self.reveal)
 
     
-    def shoot(self):
-        shoot = {                  
-        0: """
-                    ___  
-                   /___\ 
-                   \   / 
-                    \ /               
-                     0   
-                    /|\  
-                    / \  
-                
-                  ^^^^^^^""",
+    def shot(self):
 
-        1:"""                 
-                   /___\ 
-                   \   / 
-                    \ /  
-                     0   
-                    /|\  
-                    / \  
-                            
-                  ^^^^^^^""",
-                        
-        2:"""          
-                   \   / 
-                    \ /  
-                     0   
-                    /|\  
-                    / \  
-
-                  ^^^^^^^""",
-
-        3:"""          
-                    \ /  
-                     0   
-                    /|\  
-                    / \  
-
-                  ^^^^^^^""",
-
-        4:"""
-
-                     x   
-                    /|\  
-                    / \  
-                
-                  ^^^^^^^"""}
-    
+      if self.lives == 0:
+        print(self.shoot[0])
+      elif self.lives == 1:
+        print(self.shoot[1])
+      elif self.lives == 2:
+        print(self.shoot[2])
+      elif self.lives == 3:
+        print(self.shoot[3])
+      elif self.lives == 4:
+        print(self.shoot[4])   
+         
     def guess_letter(word, guessed_list):
       """This function lets the user guess a letter and prints out correct ones"""
       # self.reveal is our gussed_list in this function
@@ -107,6 +116,8 @@ class Jumper:
       print()
 
       return guessed_list
+
+
 
 
     

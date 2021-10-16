@@ -23,7 +23,7 @@ class Console:
         """
         return input(prompt)
 
-    def read_number(self, prompt):
+    def read_letter(self, prompt):
         """Gets numerical input from the user through the screen.
 
         Args: 

@@ -8,6 +8,7 @@ class Director:
 
 
     def __init__(self):
+        self.lives = 4
         self.keep_playing = True
         self.console = console()
         self.jumper = jumper()
@@ -28,4 +29,5 @@ class Director:
     def do_outputs(self):
         pass
     def do_updates(self):
-        pass
+        
+        
