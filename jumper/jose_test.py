@@ -23,24 +23,15 @@ def show():
     print(glider[4 - lives])
     print(reveal)
 
+
 while won == False and lives > 0:
     show()
-    guess = input('guess letter: ')
-    guess = guess.upper()
+    guess = input('guess letter: ').upper
     
-    if guess == word:
-        won = True
-        reaveal = word
     if len(guess) == 1 and guess in word:
         won = letter_check(guess, word)   
     else:
         lives-=1
-    show()
-
-    
-
-
-
 
     if won:
         print(f"nice! you guessed {word}")
