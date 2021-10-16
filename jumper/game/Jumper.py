@@ -71,7 +71,6 @@ class Jumper:
               print(glider[4])
               print("You've lost")
               self.lost = False
-          print("Done with process")
 
 
 
