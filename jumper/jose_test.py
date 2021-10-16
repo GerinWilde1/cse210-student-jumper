@@ -1,5 +1,5 @@
 import random
-
+from game.Shoot import glider
 
 
 word = "HAPPINESS"
@@ -7,28 +7,44 @@ reveal = list(len(word)*'_')
 lives =4 
 won = False
 
-while won == False and lives > 0:
+
+def letter_check(letter, word):
+    global reveal 
+    for i in range(0,len(word)):
+        letter = word[i]
+        if guess == letter:
+            reveal[i] = guess
+    if '_' not in reveal:
+        return True
+    else:
+        return False
+
+
+def show():
     print(reveal)
+    print(glider[4 - lives])
+    print(reveal)
+
+while won == False and lives > 0:
+    show()
     guess = input('guess letter: ')
     guess = guess.upper()
     
     if guess == word:
         won = True
+        reaveal = word
     if len(guess) == 1 and guess in word:
-        for i in range(0,len(word)):
-            letter = word[i]
-            if guess == letter:
-                reveal[i] = guess
-            if '_' not in reveal:
-                won = True
-    
-    
+        won = letter_check(guess, word)   
     else:
         lives-=1
-
+    show()
 
     
+
+
+
+
     if won:
-        print("nice!")
+        print(f"nice! you guessed {word}")
     else:
         print("sorry, loser")
