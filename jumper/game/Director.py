@@ -21,12 +21,11 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        letter = self.word.guess_letter()
-        self.console.write(letter)
+        self.word.word()
 
     def do_updates(self):
-        lives = 0
-        self.jumper.shot(lives)
+        
+        self.jumper.process()
 
     def do_outputs(self):
         pass

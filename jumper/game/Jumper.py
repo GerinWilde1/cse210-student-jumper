@@ -42,7 +42,7 @@ class Jumper:
     def process(self):
       """This is the logic while trying to get the guessing game to work
       It checks the letter"""
-      while won == False and self.lives != 0:
+      while self.won == False and self.lives != 0:
           self.show()
           guess = input('guess letter: ')
           guess = guess.upper()
