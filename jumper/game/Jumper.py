@@ -54,7 +54,7 @@ class Jumper:
               self.won = True
               self.reaveal = self.word
           if len(self.guess) == 1 and self.guess in self.word:
-              won = self.letter_check(self.guess, self.word)   
+              self.won = self.letter_check(self.guess, self.word)   
           else:
               self.lives-=1
           """When win is official this prints Congratulations message"""
