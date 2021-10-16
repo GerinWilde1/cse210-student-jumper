@@ -25,20 +25,22 @@ class Jumper:
       self.lose = False
 
     def letter_check(self, letter, word):
+      """Checks the word to see is the letter guessed is in the word."""
 
-        for i in range(0,len(word)):
-            letter = word[i]
-            if self.guess == letter:
-                self.reveal[i] = self.guess
-        if '_' not in self.reveal:
-            return True
-        else:
-            return False
+      for i in range(0,len(word)):
+          letter = word[i]
+          if self.guess == letter:
+              self.reveal[i] = self.guess
+      if '_' not in self.reveal:
+          return True
+      else:
+          return False
 
 
     def show(self):
-        print(glider[4 - self.lives])
-        print(self.reveal)
+      """prints out the picture and uses the logic needed to change depending on the lives count."""
+      print(glider[4 - self.lives])
+      print(self.reveal)
     def process(self):
       """This is the logic while trying to get the guessing game to work
       It checks the letter"""
