@@ -29,7 +29,7 @@ def guess_letter(word, guessed_list):
       
       while count < word_length:
         if count > word_length:
-            break
+            self.keep_playing = False
         if word[count] == guessed_letter:
           # if count == 0:
           #   guessed_list.replace(f"{guessed_list[count]}",f"{guessed_letter}") 

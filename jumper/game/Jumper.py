@@ -20,7 +20,7 @@ class Jumper:
 
       x = self.Word.word()
       self.shoot = {                  
-      0: """
+      4: """
                   ___  
                   /___\ 
                   \   / 
@@ -31,7 +31,7 @@ class Jumper:
               
                 ^^^^^^^""",
 
-      1:"""                 
+      3:"""                 
                   /___\ 
                   \   / 
                   \ /  
@@ -50,7 +50,7 @@ class Jumper:
 
                 ^^^^^^^""",
 
-      3:"""          
+      1:"""          
                   \ /  
                     0   
                   /|\  
@@ -58,14 +58,14 @@ class Jumper:
 
                 ^^^^^^^""",
 
-      4:"""
+      0:"""
 
                     x   
                   /|\  
                   / \  
               
                 ^^^^^^^"""}
-      self.lives = 0
+      
       self.rand = self.Word.word()#picks a random word from the word list
       self.reveal = list(len(self.word)*'_')#creates a panal to demonstrate the amount of letters the user must guess
 
@@ -74,8 +74,8 @@ class Jumper:
       print(self.reveal)
 
     
-    def shot(self):
-
+    def shot(self, lives):
+      lives = 0
       if self.lives == 0:
         print(self.shoot[0])
       elif self.lives == 1:
@@ -86,7 +86,7 @@ class Jumper:
         print(self.shoot[3])
       elif self.lives == 4:
         print(self.shoot[4])   
-         
+
     def guess_letter(word, guessed_list):
       """This function lets the user guess a letter and prints out correct ones"""
       # self.reveal is our gussed_list in this function
@@ -95,18 +95,26 @@ class Jumper:
       print()
       guessed_letter = input("Guess a letter [a-z]: ").lower()
 
-      guessed_list = guessed_list 
       word_length = len(word) 
-      count = 0
+      lives = 4
       
-      while count < word_length:
-        if count > word_length:
-            break
-        if word[count] == guessed_letter:
+      if guessed_letter
+
+
+
+
+
+
+
+
+      # while lives < word_length:
+      #   if count == 4:
+      #       break
+      #   if word[count] == guessed_letter:
           
-          guessed_list[count] = guessed_letter
+      #     guessed_list[count] = guessed_letter
           
-        count += 1
+      #   count += 1
       
       print()
 
