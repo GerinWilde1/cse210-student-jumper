@@ -14,7 +14,7 @@ list = ["abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "a
 "transcript", "transgress", "unknown", "unworthy", "unzip", "uptown", "vaporize", "vixen", "vodka",
 "voodoo", "vortex", "walkway", "waltz", "wave", "wavy", "wyvern", "xylophone", "yachtsman", "yippee", "yoked",
 "youthful", "yummy", "zephyr", "zigzag", "zigzagging", "zilch", "zombie"]
-words = random.choice(list)
+words = random.choice(list).upper()
             
 
 
