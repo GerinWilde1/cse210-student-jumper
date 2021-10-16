@@ -1,6 +1,6 @@
-import game.Jumper as jumper
-import game.word as word
-import game.console as console
+from game.Jumper import Jumper
+from game.word import Word
+from game.console import Console
 
 
 
@@ -8,12 +8,10 @@ class Director:
 
 
     def __init__(self):
-        self.lives = 4
         self.keep_playing = True
-        self.console = console()
-        self.jumper = jumper()
-        self.word = word()
-
+        self.console = Console()
+        self.jumper = Jumper()
+        self.word = Word()
 
     def start_game(self):
 
@@ -23,11 +21,15 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        letter = self.console.read_letter("Guess a letter [a-z]: ")
-        self.word.choice(letter)
+        letter = self.word.guess_letter()
+        self.console.write(letter)
+
+    def do_updates(self):
+        lives = 0
+        self.jumper.shot(lives)
 
     def do_outputs(self):
         pass
-    def do_updates(self):
-        
-        
+
+
+

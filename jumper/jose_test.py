@@ -9,6 +9,7 @@ won = False
 
 
 def letter_check(letter, word):
+
     for i in range(0,len(word)):
         letter = word[i]
         if guess == letter:
@@ -35,5 +36,7 @@ while won == False and lives > 0:
 
     if won:
         print(f"nice! you guessed {word}")
+        print("")
     else:
         print("sorry, loser")
+        print(" ")
