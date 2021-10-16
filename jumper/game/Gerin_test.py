@@ -1,8 +1,6 @@
 from word import Word
-from Word import 
 
-words = ""
+class WE(Word):
 
+        Word.word()
 
-
-print(Word.word(words))
