@@ -17,7 +17,7 @@ class Jumper:
     
 
     def __init__(self):
-
+      self.guess = ""
       self.word = "HAPPINESS"
       self.reveal = list(len(self.word)*'_')
       self.lives = 4
@@ -44,14 +44,14 @@ class Jumper:
       It checks the letter"""
       while self.won == False and self.lives != 0:
           self.show()
-          guess = input('guess letter: ')
-          guess = guess.upper()
+          self.guess = input('guess letter: ')
+          self.guess = self.guess.upper()
           
-          if guess == self.word:
+          if self.guess == self.word:
               won = True
               reaveal = self.word
-          if len(guess) == 1 and guess in self.word:
-              won = self.letter_check(guess, self.word)   
+          if len(self.guess) == 1 and self.guess in self.word:
+              won = self.letter_check(self.guess, self.word)   
           else:
               self.lives-=1
           """When win is official this prints Congratulations message"""
