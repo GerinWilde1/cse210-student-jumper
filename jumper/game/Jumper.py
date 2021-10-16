@@ -28,8 +28,8 @@ class Jumper:
     def letter_check(self, letter, word):
       """Checks the word to see is the letter guessed is in the word."""
 
-      for i in range(0,len(word)):
-          letter = word[i]
+      for i in range(0,len(self.word)):
+          letter = self.word[i]
           if self.guess == letter:
               self.reveal[i] = self.guess
       if '_' not in self.reveal:
@@ -71,6 +71,7 @@ class Jumper:
               print(glider[4])
               print("You've lost")
               self.lost = False
+              print(self.word)
 
 
 
