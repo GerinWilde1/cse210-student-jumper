@@ -1,26 +1,34 @@
-
 import random
-from game.word import Word
-from game.Shoot import glider
 
 
 
-"""We need the logic to choose which picture gets displayed
-If they get a correct letter or a wrong one."""
+word = "HAPPINESS"
+reveal = list(len(word)*'_')
+lives =4 
+won = False
 
-
-
-
-
-
-class Jumper:
+while won == False and lives > 0:
+    print(reveal)
+    guess = input('guess letter: ')
+    guess = guess.upper()
     
+    if guess == word:
+        won = True
+    if len(guess) == 1 and guess in word:
+        for i in range(0,len(word)):
+            letter = word[i]
+            if guess == letter:
+                reveal[i] = guess
+            if '_' not in reveal:
+                won = True
+    
+    
+    else:
+        lives-=1
 
-    def __init__(self):      
-        lives = 4
-        self.word  = random.choice(words)#picks a random word from the word list
-        self.reveal = list(len(self.word)*'_')#creates a panal to demonstrate the amount of letters the user must guess
 
-        
-        print(glider[4- lives])
-        print(self.reveal)
+    
+    if won:
+        print("nice!")
+    else:
+        print("sorry, loser")
