@@ -9,7 +9,7 @@ won = False
 
 
 def letter_check(letter, word):
-    
+
     for i in range(0,len(word)):
         letter = word[i]
         if guess == letter:
@@ -21,7 +21,6 @@ def letter_check(letter, word):
 
 
 def show():
-    print(reveal)
     print(glider[4 - lives])
     print(reveal)
 
