@@ -1,6 +1,6 @@
 
 import random
-from game.word import Word 
+from game.word import words
 from game.Shoot import glider
 
 
@@ -17,8 +17,9 @@ class Jumper:
     
 
     def __init__(self):
+      self.word = words
       self.guess = ""
-      self.word = "HAPPINESS"
+      #self.word = [self.words.word(self)]
       self.reveal = list(len(self.word)*'_')
       self.lives = 4
       self.won = False

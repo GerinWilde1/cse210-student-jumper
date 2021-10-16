@@ -1,5 +1,5 @@
 from game.Jumper import Jumper
-from game.word import Word
+from game.word import words
 from game.console import Console
 
 
@@ -11,7 +11,7 @@ class Director:
         self.keep_playing = True
         self.console = Console()
         self.jumper = Jumper()
-        self.word = Word()
+        self.word = words
 
     def start_game(self):
 
@@ -21,7 +21,7 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        self.word.word()
+        self.word
 
     def do_updates(self):
         
