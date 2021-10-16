@@ -44,20 +44,20 @@ class Jumper:
     def process(self):
       """This is the logic while trying to get the guessing game to work
       It checks the letter"""
-      while self.won == False and self.lives != 0:
+      while self.won == False and self.lives > 0:
           self.show()
           self.guess = input('guess letter: ')
           self.guess = self.guess.upper()
           
           if self.guess == self.word:
-              won = True
+              self.won = True
               self.reaveal = self.word
           if len(self.guess) == 1 and self.guess in self.word:
               won = self.letter_check(self.guess, self.word)   
           else:
               self.lives-=1
           """When win is official this prints Congratulations message"""
-          if won:
+          if self.won:
               print(f"nice! you guessed {self.word}")
               print("")
           else:
