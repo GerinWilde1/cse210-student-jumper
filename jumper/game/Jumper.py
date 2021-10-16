@@ -51,7 +51,7 @@ class Jumper:
           
           if self.guess == self.word:
               won = True
-              reaveal = self.word
+              self.reaveal = self.word
           if len(self.guess) == 1 and self.guess in self.word:
               won = self.letter_check(self.guess, self.word)   
           else:
