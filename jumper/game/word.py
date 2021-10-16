@@ -35,7 +35,7 @@ class Word:
         "transcript", "transgress", "unknown", "unworthy", "unzip", "uptown", "vaporize", "vixen", "vodka",
         "voodoo", "vortex", "walkway", "waltz", "wave", "wavy", "wyvern", "xylophone", "yachtsman", "yippee", "yoked",
         "youthful", "yummy", "zephyr", "zigzag", "zigzagging", "zilch", "zombie"]
-        self.words = print(random.choice(list))
+        self.words = random.choice(list)
             
 
 
