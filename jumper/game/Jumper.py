@@ -58,7 +58,7 @@ class Jumper:
           else:
               self.lives-=1
           """When win is official this prints Congratulations message"""
-          if self.won:
+          if self.won == True:
               print(f"nice! you guessed {self.word}")
               print("")
           else:
